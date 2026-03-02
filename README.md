@@ -234,7 +234,6 @@ El entorno completo se levantará automáticamente mediante contenedores.
 - Laboratorios técnicos guiados
 - Ecosistema de microservicios
 - Evolución desde entorno simple a producción
-- Sin proyecto final
 - Preparación para entornos empresariales reales
 
 ---
@@ -247,6 +246,3 @@ El entorno completo se levantará automáticamente mediante contenedores.
 - Seguridad y hardening en producción
 - Federación de identidades
 - Arquitecturas con alta disponibilidad
-
----
-
