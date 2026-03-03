@@ -141,17 +141,18 @@ Reemplazar por:
 
 ```typescript
 import { bootstrapApplication } from '@angular/platform-browser';
-import { AppComponent } from './app/app.component';
-import { initializeKeycloak } from './app/keycloak.service';
+import { appConfig } from './app/app.config';
+import { App } from './app/app';
+import { initializeKeycloak } from './keycloak.service';
 
-initializeKeycloak()
-  .then(() => {
-    bootstrapApplication(AppComponent)
-      .catch(err => console.error(err));
-  })
-  .catch(err => {
+
+initializeKeycloak().then(() => {
+  console.log('Keycloak initialized successfully');
+  bootstrapApplication(App, appConfig)
+  .catch((err) => console.error(err));
+}).catch(err => {
     console.error('Keycloak init failed', err);
-  });
+});
 ```
 
 ---
